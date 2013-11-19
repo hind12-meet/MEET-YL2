@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/movies_list.css">
 {% endblock %}
 
-{% block content %}                
+{% block content %}
 
 <!-- checking if the variable movies_list is not empty -->
 {% if movies_list %}
