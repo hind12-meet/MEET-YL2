@@ -1,0 +1,22 @@
+<!-- we are using a base template here -->
+{% extends 'movies/base.html' %}
+
+<!-- anything inside the block here are specific to this page -->
+{% block headers %}
+	<!-- importing the movies_list.css stylesheet using the STATIC_URL tag -->
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/movies.css">
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+
+<!-- a form for adding a comment -->
+Or add your own movie:<br>
+<form action="movies/addcomment" method="post">
+{% csrf_token %}
+Title: <input type="text" name="comment_text"><br>
+<input type="submit" value="Add">
+</form>
+{% endblock %}
